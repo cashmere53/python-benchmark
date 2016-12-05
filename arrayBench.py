@@ -6,7 +6,7 @@ from benchmarker import Benchmarker
 
 
 SIZE = 50
-with Benchmarker(100000, width=25, cycle=3, extra=1) as bench:
+with Benchmarker(10000, width=25, cycle=3, extra=1) as bench:
     @bench('for: random.uniform')
     def _(bm):
         array = []
@@ -26,8 +26,5 @@ with Benchmarker(100000, width=25, cycle=3, extra=1) as bench:
         append = array.append
         ran = np.random.rand
         for i in bm:
-            rarray = ran(SIZE)
-            rarray *= 2
-            rarray -= 1
-            rarray /= 10
+            rarray = ran(-0.1, 0.1, SIZE)
             append(rarray)
