@@ -20,11 +20,11 @@ with Benchmarker(10000, width=25, cycle=3, extra=1) as bench:
             append(child)
         np.array(array)
 
-    @bench('numpy.random.rand')
+    @bench('numpy.random.uniform')
     def _(bm):
         array = []
         append = array.append
-        ran = np.random.rand
+        ran = np.random.uniform
         for i in bm:
             rarray = ran(-0.1, 0.1, SIZE)
             append(rarray)
