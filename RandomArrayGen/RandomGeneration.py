@@ -1,6 +1,5 @@
 # -*- corging: utf-8 -*-
 
-import sys
 import random
 import numpy as np
 from BenchmarkerPlus import BenchmarkerPlus
