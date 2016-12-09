@@ -7,7 +7,7 @@ import copy
 import numpy as np
 cimport numpy as np
 
-def is_sorted(array):
+cdef int is_sorted(array):
     cdef int i = 1
     cdef int length = len(array)
     while i < length:
@@ -16,7 +16,7 @@ def is_sorted(array):
         i += 1
     return True
 
-def bogosort(array, verbose=False):
+cdef int _bogosort(array, int verbose=False):
     result = copy.deepcopy(array)
     judge = is_sorted
     shuffle = np.random.shuffle
@@ -32,3 +32,5 @@ def bogosort(array, verbose=False):
     print('[after] : {}'.format(result))
     return count
 
+def bogosort(array, verbose=False):
+    return _bogosort(array, verbose)
