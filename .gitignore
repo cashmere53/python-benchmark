@@ -1,1 +1,7 @@
+# pyenv setting file
 .python-version
+
+# Cython output files
+build/
+*.c
+*.so
