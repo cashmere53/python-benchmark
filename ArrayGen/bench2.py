@@ -1,6 +1,7 @@
 import sys
 import time
 import random
+import numpy as np
 from collections import deque
 from benchmarker import Benchmarker
 
@@ -48,3 +49,9 @@ with Benchmarker(loop, cycle=5, extra=1) as bench:
         ran = random.uniform
         for i in bm:
             append(ran(-0.1, 0.1))
+
+    # too fast
+    # @bench('op: use numpy.random.uniform')
+    # def _(bm):
+    #     np.random.uniform(-0.1, 0.1, bench.loop)
+
