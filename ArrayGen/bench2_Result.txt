@@ -1,0 +1,95 @@
+## benchmarker:         release 4.0.1 (for python)
+## python version:      3.5.2
+## python compiler:     GCC 4.2.1 Compatible Apple LLVM 4.2 (clang-425.0.28)
+## python platform:     Darwin-16.1.0-x86_64-i386-64bit
+## python executable:   /Users/ringle53/.pyenv/versions/anaconda3-4.1.1/bin/python
+## cpu model:           Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz 
+## parameters:          loop=5000000, cycle=5, extra=1
+
+## (#1)                                  real    (total    = user    + sys)
+normal                                 2.4429    2.3700    2.2600    0.1100
+random cache                           2.0691    2.0100    1.9100    0.1000
+append cache                           2.0658    2.0500    1.9500    0.1000
+random & append cache                  1.9710    1.8900    1.7800    0.1100
+op: precreate array                    1.4941    1.4800    1.4500    0.0300
+op: use deque                          1.9385    1.8800    1.7800    0.1000
+
+## (#2)                                  real    (total    = user    + sys)
+normal                                 2.2726    2.2300    2.1300    0.1000
+random cache                           2.0615    2.0100    1.9000    0.1100
+append cache                           2.1075    2.0500    1.9600    0.0900
+random & append cache                  1.8308    1.8100    1.7000    0.1100
+op: precreate array                    1.5093    1.4600    1.4500    0.0100
+op: use deque                          1.8688    1.8500    1.7500    0.1000
+
+## (#3)                                  real    (total    = user    + sys)
+normal                                 2.2850    2.2400    2.1400    0.1000
+random cache                           2.0098    1.9800    1.8800    0.1000
+append cache                           2.2407    2.1700    2.0400    0.1300
+random & append cache                  1.9394    1.8800    1.7700    0.1100
+op: precreate array                    1.5269    1.4900    1.4600    0.0300
+op: use deque                          1.8681    1.8400    1.7500    0.0900
+
+## (#4)                                  real    (total    = user    + sys)
+normal                                 2.2859    2.2500    2.1400    0.1100
+random cache                           2.0081    1.9800    1.8800    0.1000
+append cache                           2.1407    2.1000    2.0000    0.1000
+random & append cache                  1.9014    1.8500    1.7500    0.1000
+op: precreate array                    1.4695    1.4500    1.4400    0.0100
+op: use deque                          1.9535    1.8700    1.7700    0.1000
+
+## (#5)                                  real    (total    = user    + sys)
+normal                                 2.2886    2.2600    2.1400    0.1200
+random cache                           2.0852    2.0200    1.9100    0.1100
+append cache                           2.0799    2.0400    1.9500    0.0900
+random & append cache                  1.8596    1.8200    1.7200    0.1000
+op: precreate array                    1.4578    1.4300    1.4100    0.0200
+op: use deque                          2.0177    1.9500    1.8400    0.1100
+
+## (#6)                                  real    (total    = user    + sys)
+normal                                 2.3308    2.2600    2.1500    0.1100
+random cache                           2.0127    1.9800    1.8800    0.1000
+append cache                           2.1419    2.1000    2.0000    0.1000
+random & append cache                  1.8682    1.8500    1.7500    0.1000
+op: precreate array                    1.5265    1.4700    1.4600    0.0100
+op: use deque                          1.8334    1.8200    1.7300    0.0900
+
+## (#7)                                  real    (total    = user    + sys)
+normal                                 2.2719    2.2400    2.1400    0.1000
+random cache                           2.1142    2.0500    1.9500    0.1000
+append cache                           2.2218    2.1600    2.0500    0.1100
+random & append cache                  1.9057    1.8600    1.7500    0.1100
+op: precreate array                    1.5597    1.5200    1.4900    0.0300
+op: use deque                          1.9329    1.8800    1.7800    0.1000
+
+## Ignore min & max                       min     cycle       max     cycle
+normal                                 2.2719      (#7)    2.4429      (#1)
+random cache                           2.0081      (#4)    2.1142      (#7)
+append cache                           2.0658      (#1)    2.2407      (#3)
+random & append cache                  1.8308      (#2)    1.9710      (#1)
+op: precreate array                    1.4578      (#5)    1.5597      (#7)
+op: use deque                          1.8334      (#6)    2.0177      (#5)
+
+## Average of 5 (=7-2*1)                 real    (total    = user    + sys)
+normal                                 2.2926    2.2480    2.1400    0.1080
+random cache                           2.0476    2.0000    1.8960    0.1040
+append cache                           2.1384    2.0900    1.9920    0.0980
+random & append cache                  1.8948    1.8520    1.7480    0.1040
+op: precreate array                    1.5053    1.4700    1.4520    0.0180
+op: use deque                          1.9124    1.8640    1.7660    0.0980
+
+## Ranking                               real
+op: precreate array                    1.5053  (100.0) ********************
+random & append cache                  1.8948  ( 79.4) ****************
+op: use deque                          1.9124  ( 78.7) ****************
+random cache                           2.0476  ( 73.5) ***************
+append cache                           2.1384  ( 70.4) **************
+normal                                 2.2926  ( 65.7) *************
+
+## Matrix                                real    [01]    [02]    [03]    [04]    [05]    [06]
+[01] op: precreate array               1.5053   100.0   125.9   127.0   136.0   142.1   152.3
+[02] random & append cache             1.8948    79.4   100.0   100.9   108.1   112.9   121.0
+[03] op: use deque                     1.9124    78.7    99.1   100.0   107.1   111.8   119.9
+[04] random cache                      2.0476    73.5    92.5    93.4   100.0   104.4   112.0
+[05] append cache                      2.1384    70.4    88.6    89.4    95.8   100.0   107.2
+[06] normal                            2.2926    65.7    82.7    83.4    89.3    93.3   100.0
