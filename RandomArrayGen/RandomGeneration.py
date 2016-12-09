@@ -4,7 +4,7 @@ import random
 import numpy as np
 from BenchmarkerPlus import BenchmarkerPlus
 
-with BenchmarkerPlus(100, 10000, cycle=3, extra=1) as bench:
+with BenchmarkerPlus(size=100, loop=10000, cycle=3, extra=1) as bench:
     @bench('for: random.uniform')
     def _(bm):
         array = []
