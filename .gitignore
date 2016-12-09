@@ -8,3 +8,6 @@ build/
 
 #python cache file
 __pycache__/
+
+# Result files
+*.txt
