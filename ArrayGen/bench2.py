@@ -36,7 +36,7 @@ with Benchmarker(loop, width=25, cycle=5, extra=1) as bench:
 
     @bench('op: precreate array')
     def _(bm):
-        a = [None] * loop
+        a = [None] * bench.loop
         ran = random.uniform
         for i in a:
             i = ran(-0.1, 0.1)
