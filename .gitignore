@@ -5,3 +5,6 @@
 build/
 *.c
 *.so
+
+#python cache file
+__pycache__/
