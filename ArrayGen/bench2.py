@@ -5,7 +5,7 @@ from collections import deque
 from benchmarker import Benchmarker
 
 loop = 100000
-with Benchmarker(loop, width=25, cycle=5, extra=1) as bench:
+with Benchmarker(loop, cycle=5, extra=1) as bench:
     @bench('normal')
     def _(bm):
         a = []
