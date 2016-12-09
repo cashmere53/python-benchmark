@@ -1,0 +1,51 @@
+## benchmarker:         release 4.0.1 (for python)
+## python version:      3.5.2
+## python compiler:     GCC 4.2.1 Compatible Apple LLVM 4.2 (clang-425.0.28)
+## python platform:     Darwin-16.1.0-x86_64-i386-64bit
+## cpu model:           Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz 
+## parameters:          loop=50000, size=100, cycle=5, extra=1
+
+## (#1)                                  real    (total    = user    + sys)
+for: random.uniform                    2.2210    2.2000    2.0700    0.1300
+numpy.random.uniform                   0.2034    0.1900    0.1700    0.0200
+
+## (#2)                                  real    (total    = user    + sys)
+for: random.uniform                    2.1967    2.1700    2.0500    0.1200
+numpy.random.uniform                   0.1992    0.2000    0.1800    0.0200
+
+## (#3)                                  real    (total    = user    + sys)
+for: random.uniform                    2.2371    2.2000    2.0700    0.1300
+numpy.random.uniform                   0.2015    0.1900    0.1700    0.0200
+
+## (#4)                                  real    (total    = user    + sys)
+for: random.uniform                    2.2577    2.2200    2.0800    0.1400
+numpy.random.uniform                   0.2022    0.2000    0.1800    0.0200
+
+## (#5)                                  real    (total    = user    + sys)
+for: random.uniform                    2.2921    2.2600    2.1400    0.1200
+numpy.random.uniform                   0.1997    0.1900    0.1700    0.0200
+
+## (#6)                                  real    (total    = user    + sys)
+for: random.uniform                    2.1507    2.1400    2.0200    0.1200
+numpy.random.uniform                   0.1963    0.1900    0.1700    0.0200
+
+## (#7)                                  real    (total    = user    + sys)
+for: random.uniform                    2.3163    2.2700    2.1500    0.1200
+numpy.random.uniform                   0.2072    0.2000    0.1700    0.0300
+
+## Ignore min & max                       min     cycle       max     cycle
+for: random.uniform                    2.1507      (#6)    2.3163      (#7)
+numpy.random.uniform                   0.1963      (#6)    0.2072      (#7)
+
+## Average of 5 (=7-2*1)                 real    (total    = user    + sys)
+for: random.uniform                    2.2409    2.2100    2.0820    0.1280
+numpy.random.uniform                   0.2012    0.1940    0.1740    0.0200
+
+## Ranking                               real
+numpy.random.uniform                   0.2012  (100.0) ********************
+for: random.uniform                    2.2409  (  9.0) **
+
+## Matrix                                real    [01]    [02]
+[01] numpy.random.uniform              0.2012   100.0  1113.7
+[02] for: random.uniform               2.2409     9.0   100.0
+
