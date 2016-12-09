@@ -3,10 +3,9 @@ import time
 import random
 import numpy as np
 from collections import deque
-from benchmarker import Benchmarker
+from BenchmarkerPlus import BenchmarkerPlus
 
-loop = 100000
-with Benchmarker(loop, cycle=5, extra=1) as bench:
+with BenchmarkerPlus(loop=100000, cycle=5, extra=1) as bench:
     @bench('normal')
     def _(bm):
         a = []
