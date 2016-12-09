@@ -5,7 +5,12 @@ import numpy as np
 from collections import deque
 from BenchmarkerPlus import BenchmarkerPlus
 
+<<<<<<< HEAD:ArrayGen/bench2.py
 with BenchmarkerPlus(loop=100000, cycle=5, extra=1) as bench:
+=======
+loop = 100000
+with Benchmarker(loop, cycle=5, extra=1) as bench:
+>>>>>>> ab04b950df16a998b947a0b34f1f88ad35c26302:ArrayGen/bench2.py
     @bench('normal')
     def _(bm):
         a = []
