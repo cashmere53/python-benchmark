@@ -4,12 +4,7 @@ import random
 import numpy as np
 from BenchmarkerPlus import BenchmarkerPlus
 
-<<<<<<< HEAD:RandomArrayGen/RandomGeneration.py
 with BenchmarkerPlus(100, 10000, cycle=3, extra=1) as bench:
-=======
-SIZE = 50
-with Benchmarker(10000, cycle=3, extra=1) as bench:
->>>>>>> ab04b950df16a998b947a0b34f1f88ad35c26302:RandomArrayGen/RandomGeneration.py
     @bench('for: random.uniform')
     def _(bm):
         array = []

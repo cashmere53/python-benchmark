@@ -12,7 +12,6 @@ def main():
     array = [x for x in range(arraySize)]
     random.shuffle(array)
 
-<<<<<<< HEAD
     stime = ntime()
     result, count = bogoNormal.bogosort(array)
     etime = ntime()
@@ -24,30 +23,13 @@ def main():
     etime = ntime()
     epochTime = etime - stime
     print('bogoNumpy: {}[sec]\nspeed: {}[aps]'.format(epochTime, count/epochTime))
-=======
-    # stime = ntime()
-    # result, count = bogoNormal.bogosort(array)
-    # etime = ntime()
-    # epochTime = etime - stime
-    # print('bogoNormal: {}[sec]\nspeed: {}[cps]'.format(epochTime, count/epochTime))
-
-    # stime = ntime()
-    # result, count = bogoNumpy.bogosort(array)
-    # etime = ntime()
-    # epochTime = etime - stime
-    # print('bogoNormal: {}[sec]\nspeed: {}[cps]'.format(epochTime, count/epochTime))
->>>>>>> ab04b950df16a998b947a0b34f1f88ad35c26302
 
     stime = ntime()
     count = bogoCython.bogosort(array)
     etime = ntime()
     epochTime = etime - stime
     # print('bogoNormal: {}[sec]'.format(epochTime))
-<<<<<<< HEAD
     print('bogoCython: {}[sec]\nspeed: {}[aps]'.format(epochTime, count/epochTime))
-=======
-    print('bogoNormal: {}[sec]\nspeed: {}[cps]'.format(epochTime, count/epochTime))
->>>>>>> ab04b950df16a998b947a0b34f1f88ad35c26302
 
 if __name__ == '__main__':
     main()
