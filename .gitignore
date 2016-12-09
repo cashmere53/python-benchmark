@@ -5,9 +5,12 @@
 build/
 *.c
 *.so
+<<<<<<< HEAD
 
 #python cache file
 __pycache__/
 
 # Result files
 # *.txt
+=======
+>>>>>>> ab04b950df16a998b947a0b34f1f88ad35c26302
