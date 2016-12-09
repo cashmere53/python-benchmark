@@ -10,4 +10,4 @@ build/
 __pycache__/
 
 # Result files
-*.txt
+# *.txt
