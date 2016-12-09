@@ -4,9 +4,8 @@ import random
 import numpy as np
 from benchmarker import Benchmarker
 
-
 SIZE = 50
-with Benchmarker(10000, width=25, cycle=3, extra=1) as bench:
+with Benchmarker(10000, cycle=3, extra=1) as bench:
     @bench('for: random.uniform')
     def _(bm):
         array = []
